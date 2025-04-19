@@ -52,7 +52,12 @@ export function LoginForm({
         setUser(user)
         return router.push('/mentor/availability')  // Redirect to mentor availability page
       } else if (user.record.role === "freelancer") {
-        
+        const freelancer = await pb.collection("freelancers").getFirstListItem(
+          `user_id="${user.record.id}"`
+        )
+        user.record.freelancer = freelancer
+        setUser(user)
+        return router.push('/freelancer/projects')  // Redirect to freelancer projects page
       }
       setUser(user);
       router.push("/")  // Redirect to home page after successful login

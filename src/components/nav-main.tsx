@@ -46,7 +46,7 @@ export function NavMain({
                     <SidebarMenuButton
                       tooltip={item.title}
                       // aria-disabled={isActive}
-                      className={`flex items-center gap-2 py-4 my-0.5 rounded-md transition mx-2 w-10/12 cursor-pointer ${
+                      className={`flex items-center gap-2 py-4 my-0.5 rounded-md transition mx-2 w-11/12 cursor-pointer ${
                       isActive
                         ? "text-white bg-black cursor-not-allowed pointer-events-none"
                         : ""
